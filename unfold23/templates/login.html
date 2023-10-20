@@ -1,0 +1,47 @@
+{% import "utility.html" as util %} 
+
+
+{{util.htmltemplatetop()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" />
+<link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}" />
+
+{{util.basicnavbar("Login")}}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+
+                <div class="form-group">
+                  <label for="password" >Password</label>
+                  <input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Enter Password" name="password">
+                </div>
+                
+                  <div class="form-group">
+                    <label for="role">Type of User</label>
+                    <select class="form-select" name="role" id="role">
+                      <option selected>Open this select Type of User</option>
+                      <option value="users">Users</option>
+                      <option value="advocate">Advocate</option>
+                      <option value="lawyers">Lawyers</option>
+                      <option value="courts">Courts</option>
+                      <option value="judges">Judges</option>
+                      <option value="firms">Firms</option>
+                      <option value="hubs">Hubs</option>
+                    </select>
+                  </div>
+                <button type="submit" class="btn btn-dark">login</button>
+              </form>
+
+        </div>
+
+    </div>
+
+
+{{util.htmltemplatebottom()}}
